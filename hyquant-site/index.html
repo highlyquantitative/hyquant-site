@@ -259,9 +259,7 @@
     <div class="scroll-container" id="about-text">
 Hyquant (as in “Highly Quantitative”) is an AI telemetry research project based in Quebec.
 
-We focus on measuring how real-world compute behaves — temperature, power draw, utilization, throttling — and training models that can predict and route workloads to cut unnecessary electricity use and reduce premature hardware aging.
-
-The project is currently in its research phase. We are building a lightweight telemetry stack, validating it on heterogeneous machines, and designing a control layer that data centers and infrastructure teams will be able to run on their own hardware and their own data.
+We focus on measuring how real-world compute behaves and utilize AI for predictions in the goal of minimizing electricity waste and premature aging of hardware.
     </div>
 
     <!-- Email centered -->
@@ -312,15 +310,11 @@ The project is currently in its research phase. We are building a lightweight te
 
     const textEN = `Hyquant (as in “Highly Quantitative”) is an AI telemetry research project based in Quebec.
 
-We focus on measuring how real-world compute behaves — temperature, power draw, utilization, throttling — and training models that can predict and route workloads to cut unnecessary electricity use and reduce premature hardware aging.
+We focus on measuring how real-world compute behaves and utilize AI for predictions in the goal of minimizing electricity waste and premature aging of hardware.`;
 
-The project is currently in its research phase. We are building a lightweight telemetry stack, validating it on heterogeneous machines, and designing a control layer that data centers and infrastructure teams will be able to run on their own hardware and their own data.`;
+    const textFR = `Hyquant (pour “hautement quantitatif”) est un projet de recherche en télémétrie par IA basé au Québec.
 
-    const textFR = `Hyquant (pour “hautement quantitatif”) est un projet de recherche en télémétrie et en IA basé au Québec.
-
-Notre objectif est de mesurer le comportement réel des infrastructures de calcul — température, consommation, utilisation, throttling — afin d’entraîner des modèles capables de prédire et de rediriger les charges de travail pour réduire le gaspillage d’électricité et le vieillissement prématuré du matériel.
-
-Le projet est actuellement en phase de recherche. Nous développons une pile de télémétrie légère, la validons sur des machines hétérogènes et concevons une couche de contrôle que les centres de données et équipes d’infrastructure pourront exécuter sur leur propre matériel et leurs propres données.`;
+Notre objectif est d'analyser le comportement des ordinateurs et serveirs dans le but de prédire et minimiser le gaspillage d'électricité et le vieillissement prématuré des composantes électroniques.`;
 
     function setLang(lang) {
       langBtns.forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
