@@ -257,11 +257,9 @@
 
     <!-- Scrollable description -->
     <div class="scroll-container" id="about-text">
-Hyquant (as in “Highly Quantitative”) is an AI telemetry research project based in Quebec.
+Hyquant (as in “Highly Quantitative”) is an AI research project based in Quebec.
 
-We focus on measuring how real-world compute behaves — temperature, power draw, utilization, throttling — and training models that can predict and route workloads to cut unnecessary electricity use and reduce premature hardware aging.
-
-The project is currently in its research phase. We are building a lightweight telemetry stack, validating it on heterogeneous machines, and designing a control layer that data centers and infrastructure teams will be able to run on their own hardware and their own data.
+We focus on measuring how real-world compute behaves using a predictive AI model fully trained by the Hyquant team . Using this information, we can optimize server hardware behavior and improve the way computers use electricity, with the goal of reducing the heavy carbon footprint of servers and hardware waste.
     </div>
 
     <!-- Email centered -->
@@ -310,17 +308,13 @@ The project is currently in its research phase. We are building a lightweight te
     const about = document.getElementById("about-text");
     const langBtns = document.querySelectorAll(".lang-btn");
 
-    const textEN = `Hyquant (as in “Highly Quantitative”) is an AI telemetry research project based in Quebec.
+    const textEN = `Hyquant (as in “Highly Quantitative”) is an AI research project based in Quebec.
 
-We focus on measuring how real-world compute behaves — temperature, power draw, utilization, throttling — and training models that can predict and route workloads to cut unnecessary electricity use and reduce premature hardware aging.
+We focus on measuring how real-world compute behaves using a predictive AI model fully trained by the Hyquant Team . Using this information, we can optimize server hardware behavior and improve the way computers use electricity, with the goal of reducing the heavy carbon footprint of datacenters and hardware waste.`;
 
-The project is currently in its research phase. We are building a lightweight telemetry stack, validating it on heterogeneous machines, and designing a control layer that data centers and infrastructure teams will be able to run on their own hardware and their own data.`;
+    const textFR = `Hyquant (pour “hautement quantitatif”) est un projet de recherche et d'IA basé au Québec.
 
-    const textFR = `Hyquant (pour “hautement quantitatif”) est un projet de recherche en télémétrie et en IA basé au Québec.
-
-Notre objectif est de mesurer le comportement réel des infrastructures de calcul — température, consommation, utilisation, throttling — afin d’entraîner des modèles capables de prédire et de rediriger les charges de travail pour réduire le gaspillage d’électricité et le vieillissement prématuré du matériel.
-
-Le projet est actuellement en phase de recherche. Nous développons une pile de télémétrie légère, la validons sur des machines hétérogènes et concevons une couche de contrôle que les centres de données et équipes d’infrastructure pourront exécuter sur leur propre matériel et leurs propres données.`;
+Notre objectif est de mesurer le comportement réel des infrastructures informatiques (ordinateurs et serveurs) en utilisant un model d'IA prédictif entrainé par la Hyquant Team. Avec cette information, on peux optimiser le comportement des composantes informatiques et améliorer leur efficacité électrique. Notre but est de réduire l'empreinte carbone lourde des serveurs et des déchets électroniques.`;
 
     function setLang(lang) {
       langBtns.forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
