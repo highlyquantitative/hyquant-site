@@ -1,0 +1,284 @@
+/* optional later: Geist font
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+  
+*/
+
+/* -----------------------------------
+   GEIST FONT IMPORT
+------------------------------------- */
+
+/* -----------------------------------
+   GEIST FONT IMPORT
+------------------------------------- */
+
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #efefef;       /* main off-white */
+  color: #111111;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 400;   /* default = Regular */
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  /* no padding so the right side can touch the edge */
+  margin: 0;
+}
+
+.layout {
+  /* left content area – we leave some room on the right for the sidebar */
+  margin-right: 320px;                /* must match sidebar width */
+}
+
+
+
+/* LEFT CONTENT */
+
+.content {
+  padding: 40px 56px 56px 56px;
+}
+
+.content-top-spacer {
+  height: 200px;         /* that empty white zone at the top-left */
+}
+
+.content-body {
+  max-width: 700px;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin: 0 0 10px;
+  font-weight: 600;   /* Geist SemiBold */
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  color: #303030;
+  font-weight: 400;  /* ensure regular */
+  letter-spacing: 0.01em;
+}
+
+/* === Content subtitles (Geist Light) === */
+.subtitle {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;       /* Light weight */
+  font-size: 22px;        /* a bit smaller than main title */
+  margin: 0 0 5px 0;
+  color: #030303;
+  letter-spacing: 0.01em;
+}
+/* ---- LEFT FOOTER LINKS ---- */
+
+.content-footer {
+  margin-top: 200px;           /* how far below the last paragraph */
+  padding-bottom: 0.1px;       /* extra breathing room at bottom */
+  display: flex;
+  justify-content: center;    /* center the nav horizontally */
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;                  /* space between About / Privacy / Email */
+  font-size: 13px;            /* smaller than body text */
+  font-family: "Geist", sans-serif;
+  font-weight: 300;           /* Geist Light */
+  color: #777777;             /* softer grey */
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: inherit;             /* use the #777 above */
+}
+
+.footer-links a:hover {
+  color: #000000;             /* a bit darker on hover */
+}
+
+
+
+/* --- RIGHT SIDEBAR --- */
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;                     /* width of the white strip */
+  height: 100vh;                    /* full viewport height */
+  background-color: #ffffff;
+  border-left: 1px solid #e0e0e0;   /* vertical split line */
+  padding: 24px 32px 32px 32px;     /* top / sides / bottom */
+  box-sizing: border-box;
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* top row: logo on left, FR/EN on right */
+.sidebar-top {
+  display: flex;
+  flex-direction: column-reverse;  /* logo below, FR/EN above */
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.logo-mark img {
+  display: block;
+  max-width: 240px;                 /* adjust 170–210px if you want */
+  height: auto;
+}
+
+/* FR / EN strip */
+.lang-toggle {
+  text-align: right;
+  margin-bottom: 8px;              /* little gap below FR/EN */
+}
+
+.lang-toggle a {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  font-weight: 600;                 /* Geist SemiBold */
+}
+
+/* logo band */
+.logo-mark {
+  text-align: center;               /* center logo in column */
+}
+
+.logo-mark img {
+  display: inline-block;
+  max-width: 100%;                   /* “almost as wide” as the white side */
+  height: auto;
+}
+
+
+
+/* nav links block */
+.nav-links {
+  text-align: right;
+  margin-top: 12px;                 /* distance under logo – tweak here */
+  line-height: 1.1;
+}
+
+.nav-links a {
+  display: block;
+  margin-bottom: 0.1px;               /* tighter spacing between items */
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.04em;      /* space between letters */
+}
+
+/* bottom: SOCIALS button stuck to bottom-right */
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;            /* spacing between icons */
+    margin-top: 24px;     /* distance above the icons */
+}
+
+.social-icons img {
+    width: 36px;   /* base size (ignored for the ones below) */
+    height: auto;
+    display: block;
+}
+
+/* ---- Individual icon sizes ---- */
+.social-icons img[alt="X"] {
+    width: 26px;
+    transform: translateY(4px);   /* nudge down */
+}
+
+.social-icons img[alt="Instagram"] {
+    width: 28px;
+    transform: translateY(2px);   /* tiny nudge */
+}
+
+.social-icons img[alt="YouTube"] {
+    width: 37px;
+    transform: translateY(3px);   /* biggest nudge */
+    margin-left: 3px;   /* pull it closer */
+}
+
+
+
+.social-btn {
+  display: block;
+  width: 150px;                     /* a bit wider for future icons */
+  padding: 10px 0;
+  text-align: center;
+  margin-left: auto;                /* pushes it to the right edge */
+  margin-right: 0;
+
+  border: 1px solid #000;
+  background-color: #000;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+.content-body a {
+  text-decoration: underline;
+}
+
+.content p.footnote {
+  font-size: 13px;
+  font-family: "Geist", sans-serif;
+  font-weight: 300;         /* Geist Light */
+  color: #777777;           /* light grey */
+  margin-top: 4px;          /* small gap above */
+  line-height: 1.4;
+}
